@@ -1,0 +1,58 @@
+<div class="wrapper">
+
+    <app-navbar></app-navbar>
+    <app-sidebar></app-sidebar>
+
+    <!-- Main Container Start -->
+    <div class="main-container">
+        <div class="container">
+            <div class="cardv">
+                <div class="card-imagev">
+                    <img src="assets/images/placeholder.jpeg" alt="Card Image" />
+                </div>
+                <div class="profile-imagev">
+                    <img
+                    [src]="user.image ? 'uploaded_img/' + user.image : 'assets/images/default-avatar.png'"
+                    alt="Profile Picture"
+                    />
+                </div>
+                <div class="card-contentv">
+                    <h3>{{ user.firstName || '' }} {{ user.lastName || '' }}</h3>
+                    <br /><br />
+
+                    <table>
+                    <tr>
+                        <td>
+                        <p><span class="bl">ID: </span>{{ user.id || '' }}</p>
+                        </td>
+                        <td style="width: 100px;"></td>
+                        <td>
+                        <p><span class="bl">Nom: </span>{{ user.lastName || '' }}</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                        <p><span class="bl">Prénom: </span>{{ user.firstName || '' }}</p>
+                        </td>
+                        <td></td>
+                        <td>
+                        <p><span class="bl">Email: </span>{{ user.email || '' }}</p>
+                        </td>
+                    </tr>
+                    </table>
+                    <br />
+                    <table>
+                    <tr>
+                        <td style="text-align: center;">
+                        <a routerLink="/update-profile" class="btn1">Mettre à jour le profil</a>
+                        </td>
+                    </tr>
+                    </table>
+                    <br /><br /><br />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Main Container End -->
+

@@ -1,0 +1,316 @@
+:root{
+   
+    --blue:#3498db;
+    --dark-blue:#2980b9;
+    --red:#e74c3c;
+    --dark-red:#c0392b;
+    --black:#333;
+    --white:#fff;
+    --light-bg:#eee;
+    --box-shadow:0 5px 10px rgba(0,0,0,.1);
+ }
+ 
+ 
+ .wrapper .header .header-menu .title span{
+   
+   color: var(--dark-blue);
+ }
+ 
+ .wrapper .header .header-menu .sidebar-btn:hover{
+  
+   color: var(--dark-blue);
+ }
+ .wrapper .header .header-menu ul li a:hover{
+   
+   background: var(--blue);
+   color: #fff;
+ }
+ 
+ .wrapper .sidebar .sidebar-menu .item .menu-btn:hover{
+ 
+   color: var(--dark-blue);
+   
+ }
+ .wrapper .sidebar .sidebar-menu .item .sub-menu{
+   
+   background: var(--blue);
+   
+   overflow: hidden;
+   max-height: 0;
+   transition: 0.3s;
+   transition-property:  max-height;
+ }
+ .wrapper .sidebar .sidebar-menu .item .sub-menu a:hover{
+  
+  background: var(--blue);
+  
+ }
+ .bv {
+ 
+ 
+ color: var(--dark-blue);
+ font-size: 25px;
+ text-transform: uppercase;
+ font-weight: 900;
+ }
+ 
+ 
+ 
+ .btn1{
+ font-family: "Roboto", sans-serif;
+ font-size: 13px;
+ font-weight: bold;
+ 
+ background: var(--blue);
+ width: 150px;
+ padding: 10px;
+ text-align: center;
+ text-decoration: none;
+ text-transform: uppercase;
+ color: #fff;
+ border-radius: 5px;
+ cursor: pointer;
+ box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+ -webkit-transition-duration: 0.3s;
+ transition-duration: 0.3s;
+ -webkit-transition-property: box-shadow, transform;
+ transition-property: box-shadow, transform;
+ }
+ .btn4{
+   font-family: "Roboto", sans-serif;
+   font-size: 13px;
+   font-weight: bold;
+   
+   background: var(--blue);
+   
+   width: 150px;
+   padding: 10px;
+   text-align: center;
+   text-decoration: none;
+   text-transform: uppercase;
+   color: #fff;
+   border-radius: 5px;
+   cursor: pointer;
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+   -webkit-transition-duration: 0.3s;
+   transition-duration: 0.3s;
+   -webkit-transition-property: box-shadow, transform;
+   transition-property: box-shadow, transform;
+ }
+ 
+   .wrapper3 .box3 i.quote{
+     font-size: 40px;
+    
+     color: var(--dark-blue);
+   }
+   .fa-solid{
+       font-size: 40px;
+       
+       color: var(--dark-blue);
+   }
+
+
+.cont{
+  max-width: 800px;
+  background: #fff;
+  width: 800px;
+  padding: 25px 40px 10px 40px;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+}
+.cont .text{
+  text-align: center;
+  font-size: 35px;
+  font-weight: 600;
+  background: var(--blue);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.cont form{
+  padding: 30px 0 0 0;
+}
+.cont form .form-row{
+  display: flex;
+  margin: 32px 0;
+}
+form .form-row .input-data{
+  width: 100%;
+  height: 40px;
+  margin: 0 20px;
+  position: relative;
+}
+form .form-row .textarea{
+  height: 70px;
+}
+.input-data input,
+.textarea textarea{
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: none;
+  font-size: 17px;
+  border-bottom: 2px solid rgba(0,0,0, 0.12);
+}
+.input-data input:focus ~ label, .textarea textarea:focus ~ label,
+.input-data input:valid ~ label, .textarea textarea:valid ~ label{
+  transform: translateY(-20px);
+  font-size: 14px;
+  color: var(--dark-blue);
+}
+.textarea textarea{
+  resize: none;
+  padding-top: 10px;
+}
+.input-data label{
+  position: absolute;
+  pointer-events: none;
+  bottom: 10px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+.textarea label{
+  width: 100%;
+  bottom: 40px;
+  background: #fff;
+}
+.input-data .underline{
+  position: absolute;
+  bottom: 0;
+  height: 2px;
+  width: 100%;
+}
+.input-data .underline:before{
+  position: absolute;
+  content: "";
+  height: 2px;
+  width: 100%;
+  background: var(--blue);
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.3s ease;
+}
+
+.input-data1 .underline:before{
+  position: absolute;
+  content: "";
+  height: 2px;
+  width: 100%;
+  background: red;
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.3s ease;
+}
+
+form .form-row .input-data1{
+  width: 100%;
+  height: 40px;
+  margin: 0 20px;
+  position: relative;
+}
+form .form-row .textarea{
+  height: 70px;
+}
+.input-data1 input,
+.textarea textarea{
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: none;
+  font-size: 17px;
+  border-bottom: 2px solid rgba(0,0,0, 0.12);
+}
+.input-data1 input:focus ~ label, .textarea textarea:focus ~ label,
+.input-data1 input:valid ~ label, .textarea textarea:valid ~ label{
+  transform: translateY(-20px);
+  font-size: 14px;
+  color: rgb(190, 44, 147);
+}
+.textarea textarea{
+  resize: none;
+  padding-top: 10px;
+}
+.input-data1 label{
+  position: absolute;
+  pointer-events: none;
+  bottom: 10px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+.textarea label{
+  width: 100%;
+  bottom: 40px;
+  background: #fff;
+}
+.input-data1 .underline{
+  position: absolute;
+  bottom: 0;
+  height: 2px;
+  width: 100%;
+}
+.input-data1 .underline:before{
+  position: absolute;
+  content: "";
+  height: 2px;
+  width: 100%;
+  background: red;
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.3s ease;
+}
+
+
+.input-data1 .underline:after{
+    background: red;
+}
+
+
+.input-data input:focus ~ .underline:before,
+.input-data input:valid ~ .underline:before,
+.textarea textarea:focus ~ .underline:before,
+.textarea textarea:valid ~ .underline:before{
+  transform: scale(1);
+}
+.submit-btn .input-data{
+  overflow: hidden;
+  height: 45px!important;
+  width: 25%!important;
+}
+.submit-btn .input-data .inner{
+  height: 100%;
+  width: 300%;
+  position: absolute;
+  left: -100%;
+  background: -webkit-linear-gradient(right, #56d8e4, #9f01ea, #56d8e4, #9f01ea);
+  transition: all 0.4s;
+}
+.submit-btn .input-data:hover .inner{
+  left: 0;
+}
+.submit-btn .input-data input{
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 17px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  position: relative;
+  z-index: 2;
+}
+@media (max-width: 700px) {
+  .cont .text{
+    font-size: 30px;
+  }
+  .cont form{
+    padding: 10px 0 0 0;
+  }
+  .cont form .form-row{
+    display: block;
+  }
+  form .form-row .input-data{
+    margin: 35px 0!important;
+  }
+  .submit-btn .input-data{
+    width: 40%!important;
+  }
+}

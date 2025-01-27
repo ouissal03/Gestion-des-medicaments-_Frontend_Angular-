@@ -1,0 +1,80 @@
+
+<div class="wrapper">
+
+    <app-navbar></app-navbar>
+    <app-sidebar></app-sidebar>
+
+<div class="main-container">
+  <br>
+  <table>
+  <tr><br><br></tr>
+  <tr>
+  <td><pre></pre></td>
+  <td> 
+  <div class="cont">
+          <div class="text">profile</div>                
+          <form [formGroup]="updateProfileForm" (ngSubmit)="onSubmit()" enctype="multipart/form-data">
+     
+            <img
+            width="60px"
+            [src]="
+              userData.image
+                ? 'uploaded_img/' + userData.image
+                : 'images/default-avatar.png'
+            "
+            alt="Profile Picture"
+          />
+            <div *ngIf="message.length > 0" class="message" *ngFor="let msg of message">{{ msg }}</div>
+  
+            <div class="form-row">
+                <div class="input-data">  
+                <input type="text" formControlName="lastName" class="box">
+                   <div class="underline"></div>
+                   <label for="">Nom :</label>
+                </div>
+                <div class="input-data">
+                <input type="text" formControlName="firstName" class="box">
+                   <div class="underline"></div>
+                   <label for="">Prénom :</label>
+                </div>
+             </div>
+             <div class="form-row">
+                <div class="input-data">              
+                <input type="email" formControlName="email"  class="box">
+                   <div class="underline"></div>
+                   <label for="">Votre email :</label>
+                </div>
+                <div class="input-data">
+                <input type="file" (change)="onFileChange($event)" accept="image/jpg, image/jpeg, image/png" class="box">
+                   <div class="underline"></div>              
+                </div>
+             </div>           
+              <div class="form-row">
+                <div class="input-data">               
+                <input type="password" formControlName="oldPassword" placeholder="entrer ancien mot de passe" class="box">
+                   <div class="underline"></div>
+                   <label for="">Ancien mot de passe :</label>
+                </div>
+                <div class="input-data">
+                <input type="password" formControlName="newPassword" placeholder="entrer nouveau mot de passe" class="box">
+                   <div class="underline"></div>
+                   <label for="">Nouveau mot de passe :</label>
+                </div>
+             </div>
+                  
+              <div class="form-row">
+                <div class="input-data">                
+                <input type="password" formControlName="confirmPassword" placeholder="confirmer nouveau mot de passe" class="box">
+                   <div class="underline"></div>
+                   <label for="">Confirmez le mot de passe :</label>
+                </div>
+             </div>
+        <input type="submit" value="Mettre à jour"  class="btn">
+        <a routerLink="/profile" class="delete-btn">Retourner</a> 
+        </form>
+  </tr>
+  </table>
+  </div>
+  </div>
+ 
+  

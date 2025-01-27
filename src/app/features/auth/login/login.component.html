@@ -1,0 +1,20 @@
+
+<div class="login-form">
+    <div class="title">Se connecter</div>
+    <form (ngSubmit)="onLogin()">
+      <div class="input-boxes">
+        <div class="input-box">
+          <i class="fa-solid fa-user"></i>
+          <input type="text" name="email" placeholder="E-Mail" [(ngModel)]="email" required>
+        </div>
+        <div class="input-box">
+          <i class="fas fa-lock"></i>
+          <input type="password" name="password" placeholder="Mot de passe" [(ngModel)]="password" required>
+        </div>
+        <div class="button input-box">
+          <input type="submit" value="Se connecter">
+        </div>
+        <div class="text sign-up-text">Nouveau sur MediCare? <label for="flip">S'inscrire maintenant</label></div>
+      </div>
+    </form>
+  </div>

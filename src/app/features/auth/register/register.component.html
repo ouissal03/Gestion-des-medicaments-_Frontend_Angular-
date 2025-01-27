@@ -1,0 +1,32 @@
+
+<div class="signup-form">
+    <div class="title">S'inscrire</div>
+    <form (ngSubmit)="onRegister()">
+      <div class="input-boxes">
+        <div class="input-box">
+          <i class="fa-solid fa-user"></i>
+          <input type="text" name="nom" placeholder="Nom" [(ngModel)]="lastName" required>
+        </div>
+        <div class="input-box">
+          <i class="fa-solid fa-user"></i>
+          <input type="text" name="prenom" placeholder="Prénom" [(ngModel)]="firstName" required>
+        </div>
+        <div class="input-box">
+          <i class="fa-solid fa-envelope"></i>
+          <input type="email" name="email" placeholder="E-Mail" [(ngModel)]="email" required>
+        </div>
+        <div class="input-box">
+          <i class="fas fa-key"></i>
+          <input type="text" name="pillbox_code" placeholder="Code de pilulier" [(ngModel)]="pillboxId" required>
+        </div>
+        <div class="input-box">
+          <i class="fas fa-lock"></i>
+          <input type="password" name="password" placeholder="Mot de passe" [(ngModel)]="password" required>
+        </div>
+        <div class="button input-box">
+          <input type="submit" value="S'inscrire">
+        </div>
+        <div class="text sign-up-text">Vous avez déjà un compte ? <label for="flip">Connectez-vous</label></div>
+      </div>
+    </form>
+  </div>

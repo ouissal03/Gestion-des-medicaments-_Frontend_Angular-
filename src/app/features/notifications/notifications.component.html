@@ -1,0 +1,27 @@
+<div class="wrapper">
+    <app-navbar></app-navbar>
+    <app-sidebar></app-sidebar>
+    <div class="main-container">
+        <br>
+        <h2>Les notifications</h2>
+        <center>
+        <div class="cont">
+            <ng-container *ngIf="notifications.length > 0; else noResults">
+            <div class="wrappern" *ngFor="let notification of notifications">
+                <div class="boxn">
+                <table>
+                    <tr>
+                    <td><div class="name">{{ notification.message }}</div></td>
+                    <td>{{ notification.date | date: 'dd/MM/yyyy' }}</td>
+                    </tr>
+                </table>
+                </div>
+            </div>
+            </ng-container>
+            <ng-template #noResults>
+            <p>0 résultats</p>
+            </ng-template>
+        </div>
+        </center>
+    </div>
+</div>
