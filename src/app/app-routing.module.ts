@@ -18,20 +18,15 @@ const routes: Routes = [
       import('./features/profile/profile.module').then((m) => m.ProfileModule),
   },
   {
-    path: 'update-profile',
-    loadChildren: () =>
-      import('./features/profile/profile.module').then((m) => m.ProfileModule),
-  },
-  {
     path: 'archive',
     loadChildren: () =>
       import('./features/archive/archive.module').then((m) => m.ArchiveModule),
-  }/*,
+  },
   {
     path: 'notifications',
     loadChildren: () =>
       import('./features/notifications/notifications.module').then((m) => m.NotificationsModule),
-  }*/,
+  },
   { path: '', redirectTo: 'auth', pathMatch: 'full' },
 ];
 

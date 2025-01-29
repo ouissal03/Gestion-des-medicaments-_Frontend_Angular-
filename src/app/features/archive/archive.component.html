@@ -1,58 +1,54 @@
 <div class="wrapper">
-    <app-navbar></app-navbar>
-    <app-sidebar></app-sidebar>
-    <div class="main-container">
-        <br>
-        <h2>Les archives du pilulier</h2> 
-      <br><br>
-  
-      <table style="width: 100%; text-align: center;">
-        <tr>
-          <td>
-            <div
-              style="display: inline-block; width: 20px; height: 20px; background-color: lightgreen; margin-right: 10px;">
-            </div>
-            <p style="display: inline;">Médicaments pris</p>
-          </td>
-          <td>
-            <div
-              style="display: inline-block; width: 20px; height: 20px; background-color: #FFFC96; margin-right: 10px;">
-            </div>
-            <p style="display: inline;">Médicaments en attente</p>
-          </td>
-          <td>
-            <div
-              style="display: inline-block; width: 20px; height: 20px; background-color: pink; margin-right: 10px;">
-            </div>
-            <p style="display: inline;">Médicaments manqués</p>
-          </td>
-        </tr>
-      </table>
-      <br><br>
-        <table style="width: 100%; text-align: center; border-collapse: collapse;">
-        <td >
-        <table style="width: 100%; border-collapse: collapse;">
-        
-        <tr> 
-            <td class="centered" style="padding: 20px; text-align: center;">
-            <div class="cont">
-                <form (ngSubmit)="onDateSubmit()">
-                    <p style="color: #289ae6; display: inline; margin-right: 10px;">Sélectionner la date :</p>
-                    <input type="date" [(ngModel)]="selectedDate" name="date" required />
-                    <button type="submit" class="btn">Valider</button>
-                  </form>
-                </div>
-            </td>        
-        </tr> 
-        </table> 
+  <app-navbar></app-navbar>
+  <app-sidebar></app-sidebar>
+  <div class="main-container">
+    <br />
+    <h2>Les archives du pilulier</h2>
+    <br /><br />
+
+    <table style="width: 100%; text-align: center;">
+      <tr>
+        <td>
+          <div
+            style="display: inline-block; width: 20px; height: 20px; background-color: lightgreen; margin-right: 10px;">
+          </div>
+          <p style="display: inline;">Médicaments pris</p>
         </td>
-        <br><br>
-      <!-- Petit-déjeuner -->
-      <table style="margin: auto;">
-        <tr>
-          <td>
-            <div [ngClass]="getWrapperClass(medicationStatus.breakfast)">
-              <div [ngClass]="getBoxClass(medicationStatus.breakfast)">
+        <td>
+          <div
+            style="display: inline-block; width: 20px; height: 20px; background-color: #FFFC96; margin-right: 10px;">
+          </div>
+          <p style="display: inline;">Médicaments en attente</p>
+        </td>
+        <td>
+          <div
+            style="display: inline-block; width: 20px; height: 20px; background-color: pink; margin-right: 10px;">
+          </div>
+          <p style="display: inline;">Médicaments manqués</p>
+        </td>
+      </tr>
+    </table>
+    <br /><br />
+
+    <table style="width: 100%; text-align: center; border-collapse: collapse;">
+      <tr>
+        <td>
+          <form (ngSubmit)="onDateSubmit()">
+            <p style="color: #289ae6; display: inline; margin-right: 10px;">Sélectionner la date :</p>
+            <input type="date" [(ngModel)]="selectedDate" name="date" required />
+            <button type="submit" class="btn">Valider</button>
+          </form>
+        </td>
+      </tr>
+    </table>
+    <br /><br />
+
+    <!-- Petit-déjeuner -->
+    <table style="margin: auto;">
+      <tr>
+        <td>
+          <div [ngClass]="getWrapperClass(medicationStatus.breakfast)">
+            <div [ngClass]="getBoxClass(medicationStatus.breakfast)">
               <table style="width: 100%;">
                 <tr>
                   <td style="width: 50%;">
@@ -65,18 +61,17 @@
               </table>
             </div>
           </div>
-          </td>
-        </tr>
-      </table>
-  
-      <br>
-  
-      <!-- Déjeuner -->
-      <table style="margin: auto;">
-        <tr>
-          <td>
-            <div [ngClass]="getWrapperClass(medicationStatus.lunch)">
-              <div [ngClass]="getBoxClass(medicationStatus.lunch)">
+        </td>
+      </tr>
+    </table>
+    <br />
+
+    <!-- Déjeuner -->
+    <table style="margin: auto;">
+      <tr>
+        <td>
+          <div [ngClass]="getWrapperClass(medicationStatus.lunch)">
+            <div [ngClass]="getBoxClass(medicationStatus.lunch)">
               <table style="width: 100%;">
                 <tr>
                   <td style="width: 50%;">
@@ -88,19 +83,18 @@
                 </tr>
               </table>
             </div>
-            </div>
-          </td>
-        </tr>
-      </table>
-  
-      <br>
-  
-      <!-- Dîner -->
-      <table style="margin: auto;">
-        <tr>
-          <td>
-            <div [ngClass]="getWrapperClass(medicationStatus.dinner)">
-              <div [ngClass]="getBoxClass(medicationStatus.dinner)">
+          </div>
+        </td>
+      </tr>
+    </table>
+    <br />
+
+    <!-- Dîner -->
+    <table style="margin: auto;">
+      <tr>
+        <td>
+          <div [ngClass]="getWrapperClass(medicationStatus.dinner)">
+            <div [ngClass]="getBoxClass(medicationStatus.dinner)">
               <table style="width: 100%;">
                 <tr>
                   <td style="width: 50%;">
@@ -113,9 +107,8 @@
               </table>
             </div>
           </div>
-          </td>
-        </tr>
-      </table>
-    </div>
+        </td>
+      </tr>
+    </table>
   </div>
-  
+</div>

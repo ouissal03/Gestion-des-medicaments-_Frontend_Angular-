@@ -24,4 +24,4 @@ import { SharedModule } from '../../shared/shared.module';
     NotificationsComponent, 
   ],
 })
-export class ArchiveModule {}
+export class NotificationsModule {}

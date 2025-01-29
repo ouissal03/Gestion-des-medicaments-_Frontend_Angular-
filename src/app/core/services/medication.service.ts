@@ -12,9 +12,9 @@ export class MedicationService {
   constructor(private http: HttpClient) {}
 
   getTodayMedication(): Observable<any> {
-    return this.http.get(`${this.baseUrl}/today`);
+    return this.http.get(`${this.baseUrl}/today`, { withCredentials: true });
   }
   getMedicationByDate(date: string): Observable<any> {
-    return this.http.post(`${this.baseUrl}/archive`, { date });
+    return this.http.post(`${this.baseUrl}/archive`, { date }, { withCredentials: true });
   }
 }

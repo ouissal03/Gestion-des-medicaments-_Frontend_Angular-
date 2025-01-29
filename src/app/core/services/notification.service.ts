@@ -12,6 +12,6 @@ export class NotificationService {
   constructor(private http: HttpClient) {}
 
   getAllNotifications(): Observable<any> {
-    return this.http.get(`${this.baseUrl}/getAll`);
+    return this.http.get(`${this.baseUrl}/getAll`, { withCredentials: true });
   }
 }

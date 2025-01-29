@@ -4,7 +4,7 @@
     <div class="main-container">
         <br>
         <h2>Les notifications</h2>
-        <center>
+        <div class="profile">
         <div class="cont">
             <ng-container *ngIf="notifications.length > 0; else noResults">
             <div class="wrappern" *ngFor="let notification of notifications">
@@ -22,6 +22,6 @@
             <p>0 résultats</p>
             </ng-template>
         </div>
-        </center>
+    </div>
     </div>
 </div>

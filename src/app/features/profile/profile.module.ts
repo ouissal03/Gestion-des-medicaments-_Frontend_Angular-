@@ -2,9 +2,9 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ViewProfileComponent } from './view-profile/view-profile.component';
 import { UpdateProfileComponent } from './update-profile/update-profile.component';
-import { ProfileRoutingModule } from './profile-routing.module'; // Import the routing module
+import { ProfileRoutingModule } from './profile-routing.module';
 import { SharedModule } from '../../shared/shared.module';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
@@ -13,6 +13,8 @@ import { HttpClientModule } from '@angular/common/http';
     UpdateProfileComponent
   ],
   imports: [
+    FormsModule,
+    ReactiveFormsModule,
     CommonModule,
     SharedModule,
     ProfileRoutingModule

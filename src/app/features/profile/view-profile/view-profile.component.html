@@ -8,11 +8,11 @@
         <div class="container">
             <div class="cardv">
                 <div class="card-imagev">
-                    <img src="assets/images/placeholder.jpeg" alt="Card Image" />
+                    <img src="images/WhatsApp Image 2023-06-08 at 23.44.04.jpeg" alt="Card Image" />
                 </div>
                 <div class="profile-imagev">
                     <img
-                    [src]="user.image ? 'uploaded_img/' + user.image : 'assets/images/default-avatar.png'"
+                    [src]="user.image ? 'uploaded_img/' + user.image : 'images/default-avatar.png'"
                     alt="Profile Picture"
                     />
                 </div>
@@ -44,7 +44,9 @@
                     <table>
                     <tr>
                         <td style="text-align: center;">
-                        <a routerLink="/update-profile" class="btn1">Mettre à jour le profil</a>
+                            <a routerLink="update" class="btn1" style="display: block; width: fit-content; margin: auto;">
+                                Mettre à jour le profil
+                              </a>
                         </td>
                     </tr>
                     </table>

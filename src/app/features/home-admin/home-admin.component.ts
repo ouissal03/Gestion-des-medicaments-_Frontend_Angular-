@@ -30,15 +30,17 @@ export class HomeAdminComponent implements OnInit {
   }
 
   fetchMedicationStatus() {
-    this.medicationService.getTodayMedication().subscribe({
-      next: (data) => {
+    this.medicationService.getTodayMedication().subscribe(
+      (data) => {
+        console.log('Medication Data:', data);
         this.medicationStatus = data;
-        console.log('Données de statut des médicaments récupérées :', data);
       },
-      error: (err) => {
-        console.error('Erreur lors de la récupération des données :', err);
-      },
-    });
+      (error) => {
+        console.error('Erreur lors de la récupération des données:', error);
+        console.log('Backend response:', error.error);
+      }
+    );
+    
   }
 
   getWrapperClass(status: string): string {

@@ -12,18 +12,12 @@ export class AuthService {
   constructor(private http: HttpClient) {}
 
   login(credentials: { email: string, password: string }): Observable<any> {
-    return this.http.post(`${this.baseUrl}/login`, credentials);
+    return this.http.post(`${this.baseUrl}/login`, credentials, { withCredentials: true });
   }
 
   register(user: { lastName: string, firstName: string, email: string, pillboxId: string, password: string }): Observable<any> {
-    return this.http.post(`${this.baseUrl}/register`, user);
+    return this.http.post(`${this.baseUrl}/register`, user , { withCredentials: true });
   }
 
-  isAuthenticated(): Observable<boolean> {
-    return this.http.get(`${this.baseUrl}/check-auth`, { withCredentials: true }).pipe(
-      map(() => true), 
-      catchError(() => of(false)) 
-    );
-  }
   
 }

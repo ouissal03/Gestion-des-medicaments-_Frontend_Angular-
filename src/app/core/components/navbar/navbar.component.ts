@@ -14,8 +14,12 @@ export class NavbarComponent {
     private baseUrl = `${environment.apiUrl}/auth`;
 
   logout() {
-    this.http.post(`${this.baseUrl}/logout`, {}).subscribe(() => {
+    this.http.post(`${this.baseUrl}/logout`, {}, { responseType: 'text' })
+    .subscribe((response ) => {
+      console.log(response);
       this.router.navigate(['/auth']);
+    }, error => {
+      console.error(error);
     });
   }
 }

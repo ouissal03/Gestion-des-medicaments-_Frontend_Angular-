@@ -12,6 +12,11 @@ export class UpdateService {
   constructor(private http: HttpClient) {}
 
   getUserDetails(): Observable<any> {
-    return this.http.get(`${this.baseUrl}/user`); 
+    return this.http.get(`${this.baseUrl}/user`, { withCredentials: true });
+  }
+
+  updateUser(formData: FormData): Observable<any> {
+    return this.http.post(`${this.baseUrl}`, formData, { withCredentials: true });
   }
 }
+
