@@ -59,7 +59,11 @@ export class UpdateProfileComponent implements OnInit {
     if (this.updateProfileForm.valid) {
       const formData = new FormData();
       const { firstName, lastName, email, oldPassword, newPassword, confirmPassword, image } = this.updateProfileForm.value;
-  
+
+          if (oldPassword && oldPassword !== this.userData.password) {  
+            this.message.push('Ancien mot de passe incorrect !');
+            return;
+          }
      
       if (newPassword || confirmPassword) {  
         if (newPassword !== confirmPassword) {
@@ -87,6 +91,7 @@ export class UpdateProfileComponent implements OnInit {
         },
         (error) => {
           this.message.push('Erreur lors de la mise à jour du profil');
+          console.error('Erreur lors de la mise à jour du profil:', error);
         }
       );
     } else {

@@ -16,7 +16,10 @@ export class SidebarComponent implements OnInit {
   isActive(route: string): boolean {
     return this.router.url === route;
   }
-
+  navigateTo(path: string) {
+    this.router.navigate([path]);
+  }
+  
   ngOnInit() {
     this.updateService.getUserDetails().subscribe({
       next: (response) => {

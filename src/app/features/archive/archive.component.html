@@ -31,17 +31,25 @@
     <br /><br />
 
     <table style="width: 100%; text-align: center; border-collapse: collapse;">
+      <td >
+        <table style="width: 100%; border-collapse: collapse;">
+             
+      
       <tr>
-        <td>
+        <td class="centered" style="padding: 20px; text-align: center;">
+          <div class="cont">
           <form (ngSubmit)="onDateSubmit()">
             <p style="color: #289ae6; display: inline; margin-right: 10px;">Sélectionner la date :</p>
             <input type="date" [(ngModel)]="selectedDate" name="date" required />
             <button type="submit" class="btn">Valider</button>
           </form>
+        </div>
         </td>
       </tr>
     </table>
-    <br /><br />
+  </td>
+  <td style="text-align: center;">
+  
 
     <!-- Petit-déjeuner -->
     <table style="margin: auto;">
@@ -110,5 +118,8 @@
         </td>
       </tr>
     </table>
+  </td>
+  <td style="padding-left: 20px; text-align: right;"></td>
+  </table>
   </div>
 </div>

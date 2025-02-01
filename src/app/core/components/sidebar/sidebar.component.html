@@ -7,22 +7,22 @@
         <p>{{ user.firstName || 'Nom Inconnu'}}</p>
       </div>
       <li class="item" [ngClass]="{ 'active': isActive('/home-admin') }">
-        <a routerLink="home-admin" class="menu-btn">
+        <a (click)="navigateTo('/home-admin')" class="menu-btn">
           <i  class="fas fa-gauge"></i><span>État du jour</span>
         </a>
       </li>
       <li class="item" [ngClass]="{ 'active': isActive('/profile') || isActive('/profile/update') }">
-        <a routerLink="profile" class="menu-btn">
+        <a (click)="navigateTo('/profile')" class="menu-btn">
           <i class="fas fa-user-circle"></i><span>Profile</span>
         </a>
       </li>      
       <li class="item" [ngClass]="{ 'active': isActive('/archive') }">
-        <a routerLink="archive" class="menu-btn">
+        <a (click)="navigateTo('/archive')" class="menu-btn">
           <i class="fas fa-computer"></i><span>Archives </span>
         </a>
       </li>
       <li class="item" [ngClass]="{ 'active': isActive('/notifications') }">
-        <a routerLink="notifications" class="menu-btn">
+        <a (click)="navigateTo('/notifications')" class="menu-btn">
           <i class="fas fa-bell"></i><span>Notifications </span>
         </a>
       </li>

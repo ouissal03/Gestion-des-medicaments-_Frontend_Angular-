@@ -1,6 +1,10 @@
 
 <div class="login-form">
     <div class="title">Se connecter</div>
+    <div *ngIf="errorMessage" class="error-message">
+      {{ errorMessage }}
+    </div>
+    
     <form (ngSubmit)="onLogin()">
       <div class="input-boxes">
         <div class="input-box">
