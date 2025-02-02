@@ -1,27 +1,26 @@
-# MediCare
+# MediCare - Système de gestion de médicaments 💊
+===
+MediCare est un système intelligent de gestion de la prise de médicaments conçu pour aider les patients, les personnes âgées et ceux qui ont tendance à oublier leurs médicaments. Il permet :
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.11.
+- De rappeler aux patients de prendre leurs médicaments à temps
+- De suivre l'état de prise des médicaments grâce à un pilulier intelligent
+- De fournir une interface aux responsables (famille, soignants) pour consulter les états de prise de médicaments des patients
+- Le système repose sur une architecture IoT et cloud, intégrant un ESP8266 avec des capteurs, un backend Spring Boot & MongoDB, et un frontend Angular & Bootstrap. La communication entre les composants se fait via RabbitMQ.
 
-## Development server
+#  🌐 2. Frontend (Angular & Bootstrap)
+===
+Description :
+Ce repository contient l'application frontend développée avec Angular et Bootstrap. L'interface utilisateur permet :
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- L'authentification des utilisateurs
+- La consultation des états quotidiens de prise de médicaments des patients
+- L'affichage de l'historique des prises de médicaments
+- La modification du profil utilisateur
+- La gestion des notifications
+  
+Technologies utilisées :
 
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Angular
+Bootstrap
+TypeScript
+API REST
