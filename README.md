@@ -20,7 +20,7 @@ Ce repository contient l'application frontend développée avec Angular et Boots
   
 Technologies utilisées :
 
-Angular
-Bootstrap
-TypeScript
-API REST
+- Angular
+- Bootstrap
+- TypeScript
+- API REST
